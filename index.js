@@ -1,10 +1,10 @@
 const express = require('express');
 const QRCode = require('qrcode'); // Asegúrate de haber instalado la biblioteca qrcode previamente
 const path = require('path');
-const { inject } = require('@vercel/analytics');
+
 const app = express();
 const PORT = process.env.PORT || 3000;
-inject()
+
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.get('/', (req,res) => {

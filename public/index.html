@@ -44,6 +44,9 @@
         </div>
     </div>
     <script>
+        import { inject } from '@vercel/analytics';
+ 
+        inject();
         const submit = document.getElementById('submit')
         const qr = document.getElementById('qr')
         var input = document.getElementById('input')
