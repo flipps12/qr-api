@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:700|Poppins:400');
+:root {
+    --text: #e2f0e6;
+--background: #09110b;
+--primary: #abd3b8;
+--secondary: #39536d55;
+--accent: #7675b6;
+
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: 'Poppins';
+  font-weight: 700;
+}
+
+html {font-size: 100%;} /* 16px */
+
+h1 {font-size: 4.210rem; /* 67.36px */}
+
+h2 {font-size: 3.158rem; /* 50.56px */}
+
+h3 {font-size: 2.369rem; /* 37.92px */}
+
+h4 {font-size: 1.777rem; /* 28.48px */}
+
+h5 {font-size: 1.333rem; /* 21.28px */}
+
+small {font-size: 0.750rem; /* 12px */}
+body {
+    margin: 0;
+    background-color: var(--background);
+    color: var(--text);
+    font-family: 'Poppins';
+    font-weight: 400;
+}
+#inputContainer {
+    margin-top: 10vh;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+#inputSubContainer {
+    display: flex;
+    width: 50%;
+    gap: 2px;
+}
+#inputLink {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 10px 7px;
+    width: 85%;
+    height: 30px;
+    border-radius: 10px;
+    background-color: var(--secondary);
+    color: var(--text);
+    font-family: 'Poppins';
+    font-size: 17px;
+}
+#input {
+    border: none;
+    outline: none;
+    flex: 1;
+    background-color: transparent;
+    color: var(--text);
+    font-family: 'Poppins';
+    font-size: 17px;
+}
+#submit {
+    width: 15%;
+    border: none;
+    border-radius: 10px;
+    background-color: var(--primary);
+    color: var(--background);
+    font-family: 'Poppins';
+    font-size: 17px;
+}
+#imageContainer {
+    display: flex;
+    width: 100%;
+    height: 30vh;
+    margin-top: 10vh;
+    justify-content: center;
+}
+#imageSubContainer {
+    display: flex;
+    flex-direction: row;
+    border-radius: 50px;
+    background-color: var(--secondary);
+    padding-right: 50px;
+}
+#qr {
+    height: 100%;
+    margin-right: 50px;
+    border-radius: 20%;
+}
+a {
+    color: var(--text);
+}
+#infoqr {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+}
+@media screen and (max-width: 765px) {
+    #inputContainer {
+        justify-content: start;
+        width: 100%;
+    }
+    #inputSubContainer {
+        width: 100%;
+    }
+    #submit {
+        width: 25%;
+    }
+    #inputLink {
+        width: 75%;
+    }
+    #messageButton {
+        height: 85%;
+        width: 20%;
+    }
+    #imageSubContainer {
+        padding-right: 0;
+        width: 100%;
+    }
+    #qr {
+        margin-right: 0;
+        width: 50%;
+    }
+    #infoqr {
+        padding-left: 30px;
+    }
+    #imageContainer {
+        height: auto;
+    }
+}
