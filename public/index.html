@@ -31,9 +31,12 @@
         <div id="imageSubContainer">
             <img id="qr" src="/qr/apiqr.vercel.app">
             <div id="infoqr">
-                <a href="https://apiqr.vercel.app" id="a1" target="_blank"><i class="fa-solid fa-up-right-from-square"></i> Link</a>
-                <a href="/qr/apiqr.vercel.app" id="a2" target="_blank"><i class="fa-solid fa-up-right-from-square"></i> Image</a>
-                <a href="/qr/apiqr.vercel.app" download="qr" id="a3"><i class="fa-solid fa-up-right-from-square"></i> Download</a>
+                <a href="https://apiqr.vercel.app" id="a1" target="_blank"><i
+                        class="fa-solid fa-up-right-from-square"></i> Link</a>
+                <a href="/qr/apiqr.vercel.app" id="a2" target="_blank"><i class="fa-solid fa-up-right-from-square"></i>
+                    Image</a>
+                <a href="/qr/apiqr.vercel.app" download="qr" id="a3"><i class="fa-solid fa-up-right-from-square"></i>
+                    Download</a>
             </div>
         </div>
     </div>
@@ -53,7 +56,7 @@
         var htmlSpan = document.getElementById('htmlSpan')
         submit.addEventListener('click', () => {
             console.log(input.value)
-            if (input.value != ''){
+            if (input.value != '') {
                 qr.setAttribute('src', `/qr/${input.value}`)
                 a1.href = `http://${input.value}`
                 a2.href = `/qr/${input.value}`
@@ -62,6 +65,10 @@
             }
         })
     </script>
+    <script>
+        window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+    </script>
+    <script defer src="/_vercel/insights/script.js"></script>
 </body>
 
 </html>
