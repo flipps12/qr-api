@@ -1,5 +1,5 @@
 const express = require('express');
-const QRCode = require('qrcode'); // Asegúrate de haber instalado la biblioteca qrcode previamente
+const QRCode = require('qrcode');
 const path = require('path');
 
 const app = express();
@@ -12,15 +12,14 @@ app.get('/', (req,res) => {
 })
 
 app.get('/qr/:link', (req, res) => {
-    const textoQR = valor = req.params.link; // Cambia esto al texto que desees codificar
+    const textoQR = valor = req.params.link;
     console.log(textoQR)
-    // Genera el código QR en formato SVG (puedes elegir otros formatos también)
+
     QRCode.toString(textoQR, { errorCorrectionLevel: 'H', type: 'svg' }, (err, data) => {
         if (err) {
             console.error('Error al generar el código QR:', err);
             res.status(500).send('Error al generar el código QR');
         } else {
-            // Envía la respuesta al cliente con el código QR
             res.type('svg');
             res.send(data);
         }
