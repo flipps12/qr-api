@@ -4,12 +4,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>QR-api</title>
+    <meta name="author" content="Flipps12">
+    <meta name="audience" content="all">
+    <meta name="description" content="Crea un QR rapidamente y exportalo en IMG y HTML, usala como api...">
+    <meta name="keywords" content="qr api, qr, api, creator, qr creator">
+    <title>QR || IMG & HTML</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/3af50be71a.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
+    <nav>
+        <h1><span id="h1">Api-QR</span></h1>
+        <a href="https://github.com/flipps12/qr-api" id="github"><i id="githubIcon" class="fa-brands fa-github"></i></a>
+    </nav>
     <div id="inputContainer">
         <div id="inputSubContainer">
             <div id="inputLink">
@@ -21,12 +29,18 @@
     </div>
     <div id="imageContainer">
         <div id="imageSubContainer">
-            <img id="qr" src="/qr/a">
+            <img id="qr" src="/qr/apiqr.vercel.app">
             <div id="infoqr">
-                <a href="/qr/a" id="a1" target="_blank"><i class="fa-solid fa-up-right-from-square"></i> Link</a>
-                <a href="/qr/a" id="a2" target="_blank"><i class="fa-solid fa-up-right-from-square"></i> Image</a>
-                <a href="/qr/a" download="qr" id="a3"><i class="fa-solid fa-up-right-from-square"></i> Download</a>
+                <a href="https://apiqr.vercel.app" id="a1" target="_blank"><i class="fa-solid fa-up-right-from-square"></i> Link</a>
+                <a href="/qr/apiqr.vercel.app" id="a2" target="_blank"><i class="fa-solid fa-up-right-from-square"></i> Image</a>
+                <a href="/qr/apiqr.vercel.app" download="qr" id="a3"><i class="fa-solid fa-up-right-from-square"></i> Download</a>
             </div>
+        </div>
+    </div>
+    <div id="htmlContainer">
+        <div id="htmlSubContainer">
+            <span>HTML:</span>
+            <p><code id="htmlSpan">&lt;img src="apiqr.vercel.app/qr/apiqr.vercel.app"&gt;&lt;/img&gt;</code></p>
         </div>
     </div>
     <script>
@@ -36,6 +50,7 @@
         var a1 = document.getElementById('a1')
         var a2 = document.getElementById('a2')
         var a3 = document.getElementById('a3')
+        var htmlSpan = document.getElementById('htmlSpan')
         submit.addEventListener('click', () => {
             console.log(input.value)
             if (input.value != ''){
@@ -43,6 +58,7 @@
                 a1.href = `http://${input.value}`
                 a2.href = `/qr/${input.value}`
                 a3.href = `/qr/${input.value}`
+                htmlSpan.textContent = `<img src="apiqr.vercel.app/qr/${input.value}"></img>`
             }
         })
     </script>
