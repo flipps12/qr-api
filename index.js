@@ -26,6 +26,11 @@ app.get('/qr/:link', (req, res) => {
     });
 });
 
+app.get('/img/:link', (req, res) => {
+    const textoQR = req.params.link;
+    res.send(`<img src="/qr/github.com">`)
+});
+
 app.listen(PORT, () => {
     console.log(`Servidor Express escuchando en el puerto ${PORT}`);
 });

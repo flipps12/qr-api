@@ -142,9 +142,13 @@ a {
 }
 p {
     margin: 0;
-    padding: 2px;
+    padding: 5px 2px;
     background-color:  #111922;
     border-radius: 20px;
+}
+span {
+    font-size: 14px;
+    margin-left: 10px;
 }
 @media screen and (max-width: 765px) {
     #inputContainer {
